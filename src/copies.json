@@ -3,6 +3,7 @@
     "logo": "ZZApp"
   },
   "tasks": {
-    "header": "Tasks"
+    "header": "Tasks",
+    "addTask": "Add Task"
   }
 }
