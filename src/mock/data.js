@@ -1,5 +1,6 @@
 export const TASKS = [
   {
+    id: 'f32f3232f',
     villageName: 'Banbuiyas',
     assignee: 'Or Meydan',
     type: 'survey',
@@ -24,6 +25,7 @@ export const TASKS = [
     },
   },
   {
+    id: 'asaf32f323sas2fp2km23f',
     villageName: 'Banbuiyas',
     assignee: 'Or Meydan',
     type: 'survey',

@@ -7,6 +7,8 @@ import Button from '../../components/Button'
 import Task from '../../components/Task'
 import { TASKS } from '../../mock/data'
 import { Rings } from 'react-loader-spinner'
+import { Link } from 'react-router-dom'
+import { ROUTES } from '../../constants'
 
 const copies = copiesPrefix.tasks
 
@@ -39,8 +41,10 @@ const Tasks = () => {
         dueOn,
         estimation,
         progression,
+        id,
       }) => (
         <Task
+          key={id}
           villageName={villageName}
           assignee={assignee}
           type={type}
@@ -66,7 +70,9 @@ const Tasks = () => {
     <div className={styles.wrapper}>
       <div className={styles.top}>
         <h3 className={styles.title}>{copies.header}</h3>
-        <Button text={copies.addTask} onClick={() => {}} />
+        <Link to={ROUTES.addTask} style={{ textDecoration: 'none' }}>
+          <Button text={copies.addTask} onClick={() => {}} />
+        </Link>
       </div>
       <div className={styles.tasks}>
         {tasks.length === 0 ? loadingSpinner() : renderTasks()}
