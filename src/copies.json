@@ -14,6 +14,11 @@
       "estimation": "Estimation:",
       "dueOn": "Due:",
       "completedOn": "Completed:"
+    },
+    "progress": {
+      "total": "Total",
+      "new": "New",
+      "existing": "Existing"
     }
   }
 }

@@ -1,0 +1,29 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 88px;
+
+  .title {
+    margin: 0;
+  }
+
+  .total {
+    color: $colorBlueLight;
+    font-size: $fontSizeLarge;
+  }
+
+  .data {
+    color: $colorBlueLight;
+
+    .counter {
+      margin-right: $marginSmall;
+    }
+    .label {
+      color: $colorGray;
+    }
+  }
+}

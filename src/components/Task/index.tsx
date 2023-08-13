@@ -4,6 +4,7 @@ import Button from '../Button'
 import copiesPrefix from '../../copies.json'
 import classNames from 'classnames'
 import Information from './Information'
+import Progress from './Progress'
 
 const copies = copiesPrefix.task
 
@@ -19,29 +20,27 @@ interface TaskProps {
   completedOn?: string
   progression?: {
     waterBodies?: {
-      new: number
-      exists: number
+      newCount: number
+      oldCount: number
     }
     sprayedWaterBodies?: {
-      new: number
-      exists: number
+      newCount: number
+      oldCount: number
     }
     sampledWaterBodies?: {
-      new: number
-      exists: number
+      newCount: number
+      oldCount: number
     }
     waterBodiesWithIssues?: {
-      new: number
-      exists: number
+      newCount: number
+      oldCount: number
     }
     houses?: {
-      new: number
-      exists: number
+      newCount: number
+      oldCount: number
     }
   }
 }
-
-// const fieldsToDisplay = ['startedOn', 'fetchedOn', 'estimation', 'dueOn', 'completedOn']
 
 const Task: FC<TaskProps> = ({
   villageName,
@@ -71,7 +70,7 @@ const Task: FC<TaskProps> = ({
           estimation={estimation}
         />
       </div>
-      <div>Something Should Be Here</div>
+      <Progress title={'Water Bodies'} newCount={32} oldCount={8} />
       {status === 'active' && (
         <Button
           className={styles.markAsCompleted}
