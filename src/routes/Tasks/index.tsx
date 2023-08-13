@@ -18,6 +18,10 @@ const Tasks = () => {
         assignee='Or Meydan'
         type='survey'
         status='active'
+        startedOn='12/03/12'
+        fetchedOn='12/12/33'
+        dueOn='12/22/33'
+        estimation='12/12/33'
       />
     </div>
   )

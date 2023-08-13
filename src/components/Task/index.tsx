@@ -3,6 +3,7 @@ import styles from './index.module.scss'
 import Button from '../Button'
 import copiesPrefix from '../../copies.json'
 import classNames from 'classnames'
+import Information from './Information'
 
 const copies = copiesPrefix.task
 
@@ -40,7 +41,19 @@ interface TaskProps {
   }
 }
 
-const Task: FC<TaskProps> = ({ villageName, assignee, type, status }) => {
+// const fieldsToDisplay = ['startedOn', 'fetchedOn', 'estimation', 'dueOn', 'completedOn']
+
+const Task: FC<TaskProps> = ({
+  villageName,
+  assignee,
+  type,
+  status,
+  startedOn,
+  fetchedOn,
+  completedOn,
+  dueOn,
+  estimation,
+}) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.information}>
@@ -50,8 +63,15 @@ const Task: FC<TaskProps> = ({ villageName, assignee, type, status }) => {
           <div className={classNames(styles.status, styles[status])} />
         </div>
         <span className={styles.assignee}>{assignee}</span>
+        <Information
+          startedOn={startedOn}
+          fetchedOn={fetchedOn}
+          dueOn={dueOn}
+          completedOn={completedOn}
+          estimation={estimation}
+        />
       </div>
-      <div>Something Should Be Herer</div>
+      <div>Something Should Be Here</div>
       {status === 'active' && (
         <Button
           className={styles.markAsCompleted}
