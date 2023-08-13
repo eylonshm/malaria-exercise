@@ -1,5 +1,6 @@
 .wrapper {
   display: flex;
+  position: relative;
   padding: 24px 48px 0 48px;
   height: 100%;
   align-items: center;
@@ -17,9 +18,7 @@
 
   .tasks {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
   }
 }

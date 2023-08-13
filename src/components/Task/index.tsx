@@ -14,8 +14,8 @@ const copies = copiesPrefix.task
 interface TaskProps {
   villageName: string
   assignee: string
-  type: 'survey' | 'treat'
-  status: 'notActive' | 'active' | 'completed'
+  type: string
+  status: string
   startedOn?: string
   fetchedOn?: string
   estimation?: string
