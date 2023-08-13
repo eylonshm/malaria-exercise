@@ -9,7 +9,17 @@
   .top {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
+    .title {
+      margin-right: auto;
+    }
+  }
+
+  .tasks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
   }
 }

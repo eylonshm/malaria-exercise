@@ -2,27 +2,49 @@
 
 .wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   padding: $paddingLarge;
   background-color: $colorSecondary;
+  border-radius: $borderRadiusMedium;
+  font-family: 'Inter';
+  width: 100%;
+  min-height: 300px;
 
   .information {
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     flex-direction: column;
 
     .workType {
+      font-size: $fontSizeSmall;
+      color: $colorGray;
     }
 
     .villageName {
-      margin: 0;
+      display: flex;
+      align-items: center;
 
+      h3 {
+        font-size: $fontSizeLarge;
+        margin: 0;
+      }
       .status {
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        background-color: red;
+        margin-left: 5px;
+        margin-bottom: -3px;
       }
     }
     .assignee {
+      font-size: $fontSizeMedium;
+      color: $colorGray;
+      margin-top: $marginMedium;
     }
+  }
+
+  .markAsCompleted {
+    background-color: $colorOrange;
   }
 }

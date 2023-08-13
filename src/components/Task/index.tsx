@@ -1,5 +1,10 @@
 import React, { FC } from 'react'
 import styles from './index.module.scss'
+import Button from '../Button'
+import copiesPrefix from '../../copies.json'
+import classNames from 'classnames'
+
+const copies = copiesPrefix.task
 
 interface TaskProps {
   villageName: string
@@ -40,11 +45,20 @@ const Task: FC<TaskProps> = ({ villageName, assignee, type, status }) => {
     <div className={styles.wrapper}>
       <div className={styles.information}>
         <span className={styles.workType}>{type}</span>
-        <h4 className={styles.villageName}>
-          {villageName} <span className={(styles.status, styles[status])} />
-        </h4>
+        <div className={styles.villageName}>
+          <h3>{villageName}</h3>
+          <div className={classNames(styles.status, styles[status])} />
+        </div>
         <span className={styles.assignee}>{assignee}</span>
       </div>
+      <div>Something Should Be Herer</div>
+      {status === 'active' && (
+        <Button
+          className={styles.markAsCompleted}
+          text={copies.completeTaskButton}
+          onClick={() => {}}
+        />
+      )}
     </div>
   )
 }
