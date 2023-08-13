@@ -29,13 +29,22 @@
         font-size: $fontSizeLarge;
         margin: 0;
       }
+
       .status {
         width: 10px;
         height: 10px;
         border-radius: 50px;
-        background-color: red;
         margin-left: 5px;
         margin-bottom: -3px;
+      }
+      .notActive {
+        background-color: $colorRed;
+      }
+      .active {
+        background-color: $colorOrange;
+      }
+      .completed {
+        background-color: $colorGreen;
       }
     }
 

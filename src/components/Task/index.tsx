@@ -15,7 +15,7 @@ interface TaskProps {
   villageName: string
   assignee: string
   type: 'survey' | 'treat'
-  status: 'notActive' | 'active' | 'compoleted'
+  status: 'notActive' | 'active' | 'completed'
   startedOn?: string
   fetchedOn?: string
   estimation?: string
