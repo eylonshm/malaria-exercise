@@ -1,0 +1,87 @@
+@import '../../styles//variables.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: $paddingLarge;
+  background-color: $colorSecondary;
+  border-radius: $borderRadiusMedium;
+  font-family: 'Inter';
+  width: 100%;
+  min-height: 200px;
+  margin-bottom: $marginLarge;
+
+  .information {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-right: 100px;
+
+    .workType {
+      font-size: $fontSizeSmall;
+      color: $colorGray;
+    }
+
+    .villageName {
+      display: flex;
+      align-items: center;
+
+      h3 {
+        font-size: $fontSizeLarge;
+        margin: 0;
+      }
+
+      .status {
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        margin-left: 5px;
+        margin-bottom: -3px;
+      }
+      .notActive {
+        background-color: $colorRed;
+      }
+      .active {
+        background-color: $colorOrange;
+      }
+      .completed {
+        background-color: $colorGreen;
+      }
+    }
+
+    .assignee {
+      font-size: $fontSizeMedium;
+      color: $colorGray;
+      margin-top: $marginSmall;
+      margin-bottom: $marginLarge;
+    }
+  }
+
+  .progressionBars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 30px;
+
+    .progressBar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .bufferLine {
+        width: 180px;
+        height: 1px;
+        background-color: $colorGray;
+        margin: 25px 0;
+      }
+    }
+  }
+
+  .markAsCompleted {
+    background-color: $colorOrange;
+    margin-top: 40px;
+  }
+}

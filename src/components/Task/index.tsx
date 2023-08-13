@@ -1,13 +1,15 @@
 // @ts-nocheck
 
-import React, { FC, useCallback } from 'react'
-import styles from './index.module.scss'
+import React, { FC, useCallback, useMemo } from 'react'
+import desktopStyles from './desktop.module.scss'
+import mobileStyles from './mobile.module.scss'
 import Button from '../Button'
 import copiesPrefix from '../../copies.json'
 import classNames from 'classnames'
 import Information from './Information'
 import Progress from './Progress'
 import { PROGRESSION_STRINGS } from '../../constants'
+import useWindowDimensions from '../../hooks/useWindowDimension'
 
 const copies = copiesPrefix.task
 
@@ -57,6 +59,10 @@ const Task: FC<TaskProps> = ({
   estimation,
   progression,
 }) => {
+  const { width } = useWindowDimensions()
+  const isSmallScreen = useMemo(() => width < 800, [width])
+  const styles = isSmallScreen ? mobileStyles : desktopStyles
+
   const createProgressionBars = useCallback(() => {
     const progressionBars = []
 
