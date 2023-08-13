@@ -1,0 +1,28 @@
+@import '../../styles//variables.scss';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $paddingLarge;
+  background-color: $colorSecondary;
+
+  .information {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .workType {
+    }
+
+    .villageName {
+      margin: 0;
+
+      .status {
+      }
+    }
+    .assignee {
+    }
+  }
+}
