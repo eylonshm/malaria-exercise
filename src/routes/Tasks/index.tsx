@@ -22,6 +22,20 @@ const Tasks = () => {
         fetchedOn='12/12/33'
         dueOn='12/22/33'
         estimation='12/12/33'
+        progression={{
+          waterBodies: {
+            oldCount: 12,
+            newCount: 19,
+          },
+          sprayedWaterBodies: {
+            oldCount: 2,
+            newCount: 32,
+          },
+          houses: {
+            oldCount: 12,
+            newCount: 8,
+          },
+        }}
       />
     </div>
   )

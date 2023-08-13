@@ -14,6 +14,7 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    padding-right: 100px;
 
     .workType {
       font-size: $fontSizeSmall;
@@ -37,11 +38,32 @@
         margin-bottom: -3px;
       }
     }
+
     .assignee {
       font-size: $fontSizeMedium;
       color: $colorGray;
       margin-top: $marginSmall;
       margin-bottom: $marginLarge;
+    }
+  }
+
+  .progressionBars {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+
+    .progressBar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .bufferLine {
+        height: 90px;
+        width: 1px;
+        background-color: $colorGray;
+        margin: 0 25px;
+      }
     }
   }
 

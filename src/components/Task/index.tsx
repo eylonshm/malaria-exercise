@@ -1,10 +1,13 @@
-import React, { FC } from 'react'
+// @ts-nocheck
+
+import React, { FC, useCallback } from 'react'
 import styles from './index.module.scss'
 import Button from '../Button'
 import copiesPrefix from '../../copies.json'
 import classNames from 'classnames'
 import Information from './Information'
 import Progress from './Progress'
+import { PROGRESSION_STRINGS } from '../../constants'
 
 const copies = copiesPrefix.task
 
@@ -52,7 +55,29 @@ const Task: FC<TaskProps> = ({
   completedOn,
   dueOn,
   estimation,
+  progression,
 }) => {
+  const createProgressionBars = useCallback(() => {
+    const progressionBars = []
+
+    for (const key in progression) {
+      progressionBars.push(
+        <Progress
+          title={PROGRESSION_STRINGS[key]}
+          newCount={progression[key].newCount}
+          oldCount={progression[key].oldCount}
+        />,
+      )
+    }
+
+    return progressionBars.map((progressionBars, index) => (
+      <div className={styles.progressBar}>
+        {index !== 0 && <div className={styles.bufferLine} />}
+        {progressionBars}
+      </div>
+    ))
+  }, [])
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.information}>
@@ -70,7 +95,7 @@ const Task: FC<TaskProps> = ({
           estimation={estimation}
         />
       </div>
-      <Progress title={'Water Bodies'} newCount={32} oldCount={8} />
+      <div className={styles.progressionBars}>{createProgressionBars()}</div>
       {status === 'active' && (
         <Button
           className={styles.markAsCompleted}
