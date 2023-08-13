@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  display: flex;
+  position: relative;
+  padding: 48px 48px 0 48px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: $colorOrange;
+
+  .link {
+    text-decoration: none;
+    color: $colorOrange;
+    font-size: $fontSizeLarge;
+    font-weight: bold;
+  }
+}
