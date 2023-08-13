@@ -1,0 +1,14 @@
+@import '../../styles//variables.scss';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $paddingSmall $paddingLarge;
+  background-color: $colorBlueDark;
+  color: $colorSecondary;
+  outline: none;
+  border: none;
+  border-radius: $borderRadiusMedium;
+  cursor: pointer;
+}

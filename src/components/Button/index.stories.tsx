@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import Tasks from './index'
+import Button from './index'
 
 const meta = {
-  title: 'Routes/Tasks',
-  component: Tasks,
+  title: 'Components/Button',
+  component: Button,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Tasks>
+} satisfies Meta<typeof Button>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
-  args: {},
+  args: { text: 'Click', onClick: () => {} },
 }

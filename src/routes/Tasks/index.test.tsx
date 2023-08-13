@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
-import Navbar from './index'
+import Tasks from './index'
 
-it(`Navbar is rendered and contains logo`, () => {
-  render(<Navbar />)
+it(`Tasks is rendered and contains logo`, () => {
+  render(<Tasks />)
   expect(screen.getByText(/app/i)).toBeInTheDocument()
 })
